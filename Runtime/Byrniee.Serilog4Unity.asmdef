@@ -1,0 +1,16 @@
+{
+    "name": "Byrniee.Serilog4Unity",
+    "references": [
+        "Byrniee.UnityLogging",
+        "Byrniee.UnityConfiguration"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
