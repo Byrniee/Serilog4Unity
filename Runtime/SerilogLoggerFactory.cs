@@ -58,6 +58,11 @@ namespace Byrniee.Serilog4Unity
 
         private void ConfigureUnitySink(LoggerConfiguration loggerConfiguration)
         {
+            if (serilogSettings.Unity == null)
+            {
+                return;
+            }
+
             LogEventLevel logEventLevel = GetLogLevel(serilogSettings.Unity.MinimumLoggingLevel);
             string outputTemplate = serilogSettings.Unity.OutputTemplate;
 
@@ -66,6 +71,11 @@ namespace Byrniee.Serilog4Unity
 
         private void ConfigureFileSink(LoggerConfiguration loggerConfiguration)
         {
+            if (serilogSettings.File == null)
+            {
+                return;
+            }
+
             LogEventLevel logEventLevel = GetLogLevel(serilogSettings.File.MinimumLoggingLevel);
             string outputTemplate = serilogSettings.File.OutputTemplate;
             string fileName = serilogSettings.File.FileName;
