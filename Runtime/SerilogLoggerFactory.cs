@@ -5,6 +5,8 @@ using Byrniee.UnityConfiguration;
 using Byrniee.UnityLogging;
 using Serilog;
 using Serilog.Events;
+using Serilog.Sinks.Graylog;
+using Serilog.Sinks.Graylog.Core.Transport;
 
 namespace Byrniee.Serilog4Unity
 {
@@ -40,6 +42,7 @@ namespace Byrniee.Serilog4Unity
 
             ConfigureUnitySink(loggerConfiguration);
             ConfigureFileSink(loggerConfiguration);
+            ConfigureGraylogSink(loggerConfiguration);
 
 
             Log.Logger = loggerConfiguration
@@ -86,6 +89,22 @@ namespace Byrniee.Serilog4Unity
                 outputTemplate,
                 rollingInterval: RollingInterval.Day,
                 retainedFileCountLimit: serilogSettings.File.FileRetensionDays);
+        }
+
+        private void ConfigureGraylogSink(LoggerConfiguration loggerConfiguration)
+        {
+            if (serilogSettings.Graylog == null)
+            {
+                return;
+            }
+
+            loggerConfiguration.WriteTo.Graylog(
+                new GraylogSinkOptions()
+                {
+                    HostnameOrAddress = serilogSettings.Graylog.BaseUrl,
+                    Port = serilogSettings.Graylog.Port,
+                    TransportType = TransportType.Http,
+                });
         }
     }
 }

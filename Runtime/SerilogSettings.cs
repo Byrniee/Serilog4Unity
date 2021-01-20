@@ -20,6 +20,11 @@ namespace Byrniee.Serilog4Unity
         /// </summary>
         public FileSinkSettings File { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Graylog sink settings.
+        /// </summary>
+        public GraylogSinkSettings Graylog { get; set; }
+
         public class UnityConsoleSinkSettings
         {
             /// <summary>
@@ -54,6 +59,19 @@ namespace Byrniee.Serilog4Unity
             /// Gets or sets the file retension in days.
             /// </summary>
             public int FileRetensionDays { get; set; }
+        }
+
+        public class GraylogSinkSettings
+        {
+            /// <summary>
+            /// Gets or sets the base URL.
+            /// </summary>
+            public string BaseUrl { get; set; }
+
+            /// <summary>
+            /// Gets or sets the port number.
+            /// </summary>
+            public int Port { get; set; }
         }
     }
 }

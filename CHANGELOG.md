@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2021/01/20
+### Added
+- Graylog sink.
+- Dependency on UnityJson package.
+
+### Changed
+- Updated readme file.
+
 ## [1.0.0] - 2020/10/08
 ### Added
 - Initial version

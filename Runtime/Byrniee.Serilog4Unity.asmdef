@@ -2,7 +2,8 @@
     "name": "Byrniee.Serilog4Unity",
     "references": [
         "Byrniee.UnityLogging",
-        "Byrniee.UnityConfiguration"
+        "Byrniee.UnityConfiguration",
+        "Byrniee.UnityJson"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
