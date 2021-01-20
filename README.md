@@ -30,6 +30,7 @@ The package can be configured using the UnityConfiguration package.
           "FileRetensionDays": 7
       },
       "Graylog": {
+          "MinimumLoggingLevel": "Warning",
           "BaseUrl": "http://localhost",
           "Port": 12201,
       }

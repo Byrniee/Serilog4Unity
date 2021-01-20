@@ -97,6 +97,8 @@ namespace Byrniee.Serilog4Unity
             {
                 return;
             }
+            
+            LogEventLevel logEventLevel = GetLogLevel(serilogSettings.Graylog.MinimumLoggingLevel);
 
             loggerConfiguration.WriteTo.Graylog(
                 new GraylogSinkOptions()
@@ -104,6 +106,7 @@ namespace Byrniee.Serilog4Unity
                     HostnameOrAddress = serilogSettings.Graylog.BaseUrl,
                     Port = serilogSettings.Graylog.Port,
                     TransportType = TransportType.Http,
+                    MinimumLogEventLevel = logEventLevel,
                 });
         }
     }

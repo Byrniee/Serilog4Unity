@@ -64,6 +64,11 @@ namespace Byrniee.Serilog4Unity
         public class GraylogSinkSettings
         {
             /// <summary>
+            /// Gets or sets the minimum logging level.
+            /// </summary>
+            public string MinimumLoggingLevel { get; set; }
+            
+            /// <summary>
             /// Gets or sets the base URL.
             /// </summary>
             public string BaseUrl { get; set; }
