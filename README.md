@@ -7,10 +7,10 @@ This package depends on the Unity Logging, Unity Json and Unity Configuration pa
 
 ```
   "dependencies": {
-    "com.byrniee.serilog4unity": "git@github.com:Byrniee/Serilog4Unity.git",
-    "com.byrniee.unitylogging": "git@github.com:Byrniee/UnityLogging.git",
-    "com.byrniee.unityconfiguration": "git@github.com:Byrniee/UnityConfiguration.git",
-    "com.byrniee.unityjson": "git@github.com:Byrniee/UnityJson.git",
+    "com.byrniee.serilog4unity": "git@github.com:Byrniee/Serilog4Unity.git#1.1.0",
+    "com.byrniee.unitylogging": "git@github.com:Byrniee/UnityLogging.git"#1.0.0,
+    "com.byrniee.unityconfiguration": "git@github.com:Byrniee/UnityConfiguration.git"#1.3.0,
+    "com.byrniee.unityjson": "git@github.com:Byrniee/UnityJson.git"#1.0.0,
 ```
 
 ### Config
